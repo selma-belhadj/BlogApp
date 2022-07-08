@@ -1,9 +1,26 @@
-# Blog app - 
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Blog app 
 The Blog app is a classic example of a blog website. It is a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
 ## Getting Started
+- clone the repository
+`git clone https://github.com/selma-belhadj/BlogApp.git`
+- navigate to the folder
+`cd BlogApp`
+- checkout the feature
+`git checkout process-data`
+- Install packages
+`bundle install`
+- Setup database
+`rails db:setup`
+- Run migration
+`rails db:migrate`
 
-This repository includes files with plain SQL that can be used to recreate a database:
+## Built With
 
+- Ruby
+- Ruby on Rails
+- PostgreSQL
 
 ## Authors
 
