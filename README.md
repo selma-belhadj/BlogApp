@@ -1,4 +1,4 @@
-# ![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Blog app 
 The Blog app is a classic example of a blog website. It is a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
@@ -17,6 +17,7 @@ The Blog app is a classic example of a blog website. It is a fully functional we
 `rails db:migrate`
 
 ## Built With
+
 - Ruby
 - Ruby on Rails
 - PostgreSQL
