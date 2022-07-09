@@ -16,6 +16,30 @@ RSpec.describe Post, type: :model do
     likes_counter: 0 
   )
 
+  # let(:user_blog) { User.create!(
+  #   name: 'Sarah',
+  #   photo: 'https://unsplash.com/photos/BXCZi9smw78',
+  #   bio: 'Hand hanging a leif inside the forest!',
+  #   posts_counter: 0)
+  # }
+
+  # let(:post_blog) do 
+  #   Post.new(
+  #   user: user_blog,
+  #   title: 'Sarah\s Post',
+  #   text: 'Beautiful House in the middle of the forest!',
+  #   comments_counter: 0,
+  #   likes_counter: 0 )
+  # end
+
+  let(:comment1) { Comment.new(user: user_blog, post: post_blog, text: 'c1') }
+  let(:comment2) { Comment.new(user: user_blog, post: post_blog, text: 'c2') }
+  let(:comment3) { Comment.new(user: user_blog, post: post_blog, text: 'c3') }
+  let(:comment4) { Comment.new(user: user_blog, post: post_blog, text: 'c4') }
+  let(:comment5) { Comment.new(user: user_blog, post: post_blog, text: 'c5') }
+  let(:comment6) { Comment.new(user: user_blog, post: post_blog, text: 'c6') }
+
+
   context 'Post.title value' do
     it 'Doesn\'t accept nil as value for title' do
       post_blog.title = nil
@@ -83,5 +107,34 @@ RSpec.describe Post, type: :model do
     end 
   end
 
-  
+  context 'Post.five_recent_comments' do
+    it 'returns nothing without any comments' do
+      comments_count = post_blog.five_recent_comments.count
+      expect(comments_count).to be 0
+    end
+
+    it 'returns empty list if there is no comments' do
+      expect(post_blog.five_recent_comments).to eq []
+    end
+
+    it 'returns recent five comments in right order' do
+      comment1.save!
+      comment2.save!
+      comment3.save!
+      comment4.save!
+      comment5.save!
+      comment6.save!
+
+      post_blog.reload
+      actual_comments = post_blog.five_recent_comments.pluck(:text)
+      expected_comments = [
+        comment6.text,
+        comment5.text,
+        comment4.text,
+        comment3.text,
+        comment2.text
+      ]
+      expect(actual_comments).to eq expected_comments
+    end
+  end
 end
