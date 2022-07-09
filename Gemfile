@@ -6,6 +6,10 @@ ruby '3.1.1'
 gem 'rails', '~> 7.0.3'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
