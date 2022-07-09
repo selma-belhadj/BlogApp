@@ -12,41 +12,39 @@ RSpec.describe User, type: :model do
     it 'Doesn\'t accept nil as value for name' do
       user_blog.name = nil
       expect(user_blog).to_not be_valid
-    end 
+    end
 
     it 'Doesn\'t accept blank space as value for name' do
       user_blog.name = '  '
       expect(user_blog).to_not be_valid
-    end 
+    end
 
     it 'accept "Sarah" as name' do
       user_blog.name = 'Sarah'
       expect(user_blog).to be_valid
-    end 
-
+    end
   end
 
   context 'User.posts_counter value' do
-
     it 'Doesn\'t accept blank space as value for posts_counter' do
       user_blog.posts_counter = ' '
       expect(user_blog).to_not be_valid
-    end  
+    end
 
     it 'Doesn\'t accept float  as value for posts_counter' do
       user_blog.posts_counter = 3.9
       expect(user_blog).to_not be_valid
-    end 
+    end
 
     it 'Doesn\'t accept negative number as value for posts_counter' do
       user_blog.posts_counter = - 3
       expect(user_blog).to_not be_valid
-    end 
+    end
 
     it 'accept "posts_counter" as integer' do
       user_blog.posts_counter = 3
       expect(user_blog).to be_valid
-    end 
+    end
   end
 
   context 'User.three_recent_posts' do
@@ -55,7 +53,6 @@ RSpec.describe User, type: :model do
     let(:post2) { Post.new(title: 'post 2', user: the_user_blog, text: 't', comments_counter: 0, likes_counter: 0) }
     let(:post3) { Post.new(title: 'post 3', user: the_user_blog, text: 't', comments_counter: 0, likes_counter: 0) }
     let(:post4) { Post.new(title: 'post 4', user: the_user_blog, text: 't', comments_counter: 0, likes_counter: 0) }
-
 
     it 'returns nothing without any posts' do
       posts_count = the_user_blog.three_recent_posts.count
@@ -78,9 +75,7 @@ RSpec.describe User, type: :model do
       titles = posts.pluck(:title)
 
       expect(posts_count).to be 3
-      expect(titles).to eq [post4.title, post3.title, post2.title]   
-    end 
+      expect(titles).to eq [post4.title, post3.title, post2.title]
+    end
   end
-
-
 end
