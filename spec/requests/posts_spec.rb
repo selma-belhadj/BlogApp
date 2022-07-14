@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET /index" do
-    before(:example) {get user_posts_path(1)}
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /index' do
+    before(:example) { get user_posts_path(1) }
 
     it 'responds with code 200' do
       expect(response).to have_http_status(:ok)
@@ -17,8 +17,8 @@ RSpec.describe "Posts", type: :request do
     end
   end
 
-  describe "GET /index" do
-    before(:example) {get user_post_path(1,1)}
+  describe 'GET /index' do
+    before(:example) { get user_post_path(1, 1) }
 
     it 'responds with code 200' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +29,7 @@ RSpec.describe "Posts", type: :request do
     end
 
     it 'shows correct content in the view' do
-      expect(response.body).to include('Here is the details of the given post for the given user based on user_id and post_id')
+      expect(response.body).to include('Here is the details of the given post for the given user')
     end
   end
 end
