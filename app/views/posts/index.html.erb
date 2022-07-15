@@ -1,3 +1,9 @@
-<h1>Posts List</h1>
+<section class="users">
+    <%= render partial: "user_posts", locals: { post: @posts.first.user } %>
+    <% @posts.each do |post|  %>
+    <div>
+        <%= render partial: "post_cards", locals: { post: post } %> 
+    </div>
+    <% end %>
 
-<p>Here is a list of all posts for a given user based on the given user_id</p>
+</section>
