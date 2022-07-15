@@ -1,3 +1,26 @@
-<h1>User Details </h1>
+<section >
+<div class="users">
+     <%= link_to @user do %>
+       <%= render partial: "user_card", locals: { user: @user } %>
+     <% end %>
 
-<p>Here is the details of the given user based on his user_id</p>
+<% @recent_posts.each_with_index do |post,index|  %>
+      <section class='user-section-card'>
+      <div class="comment-card">
+        <div class="user-card__name">
+         <h3> Post #<%= index+1 %> </h3>
+         <p class="user-bio"><%= post.text %></p>
+        </div>
+        <div class="comment__like">
+        <p class="number-posts">Comments:<%= post.comments_counter %> </p>  
+        <p class="number-posts">Likes:<%= post.likes_counter %> </p>  
+        </div>
+        </div>
+      </section>
+    <% end %>
+  </div>
+
+
+ <%= link_to 'See all posts', user_posts_path(@user.id), class: "see-all" %>
+ <p class="copy-right">© 2022 GitHub, Inc. Terms</p>
+</section>
