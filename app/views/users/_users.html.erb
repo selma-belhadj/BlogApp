@@ -1,0 +1,7 @@
+<section class="users">
+  <% @users.each do |user| %>
+     <%= link_to user do %>
+       <%= render partial: "user_card", locals: { user: user } %>
+     <% end %>
+  <% end %>
+</section>
