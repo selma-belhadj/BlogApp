@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
  .user-img img {
     width: 100px;
     height: 100px;
@@ -107,3 +116,12 @@
   .copy-right {
     text-align: center;
   }
+
+  .comment-owner {
+    display: flex;
+    flex-direction: column;
+  }
+
+.commets-container {
+  padding: 10px;
+}
