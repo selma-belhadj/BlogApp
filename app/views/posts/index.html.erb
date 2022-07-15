@@ -1,9 +1,13 @@
 <section class="users">
-    <%= render partial: "user_posts", locals: { post: @posts.first.user } %>
+<% if @posts.exists? %>
+      <%= render partial: "user_posts", locals: { post: @posts.first.user } %>
+
     <% @posts.each do |post|  %>
     <div>
         <%= render partial: "post_cards", locals: { post: post } %> 
     </div>
     <% end %>
-
+<% else %>
+    <p>This user does not have any posts</p>
+<% end %>
 </section>
