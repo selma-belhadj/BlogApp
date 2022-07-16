@@ -1,0 +1,15 @@
+<section class='user-section-card'>
+<div class="user-img">
+<%= image_tag('user-img.png',  :width => "100px", :heigth=>"100px") %>
+</div>
+
+<div class="user-section-card">
+  <div class="user-details">
+    <h2> <%= user.name %> </h2>
+  </div>
+  <div class="user-card">
+    <p class="number-posts" >
+      Number of posts:<%= user.posts_counter  %>
+    </p>  
+  </div>
+</section>

@@ -1,3 +1,15 @@
-<h1>Post Details </h1>
 
-<p>Here is the details of the given post for the given user based on user_id and post_id</p>
+    <div class="users">
+        <div class="user-section-card">
+            <h2><%= @post.title %> by <%= @post.user.name %> </h2>
+            <p>Comments: <%= @post.comments_counter %></p>
+            <p>Likes: <%= @post.likes_counter %></p>
+        </div> 
+        <div class="user-section-card">
+            <h4><%= @post.text %></h4>
+        </div>
+        <div class="commets-container">
+            <%= render partial: "comment_card", locals: { post: @post, comments: @post.comment} %>
+        </div>
+        
+</div> 

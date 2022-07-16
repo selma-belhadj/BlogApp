@@ -1,0 +1,13 @@
+<section class="user-section-card ">
+  <div class="user-section-card comment-owner">
+        <% if post.comments_counter == 0 %>
+            <p>This post does not have any comments</p>
+        <% else %>
+             <% post.five_recent_comments.each do |comment|  %>
+                <ul class="user-details">
+                    <li ><%= comment.user.name %>: <%= comment.text %></li>
+                </ul>
+            <% end %>
+        <% end %>
+    </div>
+</section>
