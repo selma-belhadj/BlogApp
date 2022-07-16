@@ -7,6 +7,7 @@
         </div> 
         <div class="user-section-card">
             <h4><%= @post.text %></h4>
+            <%= render partial: "likes/new_like"%>
         </div>
         <div class="commets-container">
             <%= render partial: "comment_card", locals: { post: @post, comments: @post.comment} %>
