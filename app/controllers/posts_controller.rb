@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @post = Post.create(post_params)
     @post.user = Current.user
     if @post.save
-      flash[:notice] = "Post created successfully"
+      flash[:notice] = 'Post created successfully'
       redirect_to user_post_path(@post.user, @post)
     else
       render 'new', status: :unprocessable_entity
@@ -23,7 +23,8 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  private 
+  private
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
