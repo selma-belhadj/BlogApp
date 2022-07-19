@@ -48,7 +48,7 @@ RSpec.describe User, type: :model do
   end
 
   context 'User.three_recent_posts' do
-    let(:the_user_blog) { User.create!(name: 'Sarah', photo: 'https://unsplash.com/photos/BXCZi9smw78', bio: 'Hand hanging a leif inside the forest!', posts_counter: 0) }
+    let(:the_user_blog) { User.create!(name: 'Koukou', photo: 'https://unsplash.com/photos/BXCZi9smw78', bio: 'Hand hanging a leif inside the forest!', posts_counter: 0) }
     let(:post1) { Post.new(title: 'post 1', user: the_user_blog, text: 't', comments_counter: 0, likes_counter: 0) }
     let(:post2) { Post.new(title: 'post 2', user: the_user_blog, text: 't', comments_counter: 0, likes_counter: 0) }
     let(:post3) { Post.new(title: 'post 3', user: the_user_blog, text: 't', comments_counter: 0, likes_counter: 0) }
