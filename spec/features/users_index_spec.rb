@@ -25,7 +25,8 @@ RSpec.describe 'Testing user index page', type: :feature do
       end
 
       scenario 'See profile picture for each user' do
-        expect(page.first('img')['src']).to have_content 'user-img-6cd3d591e5bf0c523e69cd41cb477e1f1f93b196c19da72993501fdba413d9f5.png'
+        expect(page.first('img')['src']).to have_content \
+          'user-img-6cd3d591e5bf0c523e69cd41cb477e1f1f93b196c19da72993501fdba413d9f5.png'
       end
 
       # scenario "When I click on a user, I am redirected to that user's show page" do
