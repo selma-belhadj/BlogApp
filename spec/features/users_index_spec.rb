@@ -2,12 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Testing user index page', type: :feature do
   describe 'GET index' do
-
-      @first_user = User.create(name: 'John', photo: 'user-img.png', bio: 'Developer.', posts_counter: 0)
-      @second_user = User.create(name: 'Mira', photo: 'user-img.png', bio: 'Web Developer.', posts_counter: 0)
-      @third_user = User.create(name: 'Silla', photo: 'user-img.png', bio: 'Frontend Developer.', posts_counter: 0)
-      let!(:user) { User.create(name: 'Sirra', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Kenya.', posts_counter: 0) }
-
+    @first_user = User.create(name: 'John', photo: 'user-img.png', bio: 'Developer.', posts_counter: 0)
+    @second_user = User.create(name: 'Mira', photo: 'user-img.png', bio: 'Web Developer.', posts_counter: 0)
+    @third_user = User.create(name: 'Silla', photo: 'user-img.png', bio: 'Frontend Developer.', posts_counter: 0)
+    let!(:user) { User.create(name: 'Sirra', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Kenya.', posts_counter: 0) }
 
     scenario 'shows the right content' do
       visit users_path
