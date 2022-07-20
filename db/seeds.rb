@@ -10,3 +10,4 @@ User.create(name: 'Tommy', photo: 'https://www.istockphoto.com/vector/businessma
 User.create(name: 'Sillia', photo: 'https://www.istockphoto.com/vector/businessman-avatar-icon-gm1298227218-391128738', bio: 'Doctor from Egypt', posts_counter: 0)
 User.create(name: 'Sarah', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Morocco.', posts_counter: 0)
 User.create(name: 'Mike', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Engineer from Algeria', posts_counter: 0)
+User.create(name: 'Selma', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', email: 'selma@gmail.com', password: 'selma123'
