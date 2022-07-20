@@ -11,14 +11,10 @@
   </head>
 
   <body class="container center">
+   <br/>
+    <% if notice %>
+      <%= render 'layouts/alerts' %>
+    <% end %>
      <%= yield %> 
-     <div>
-      <p class="notice">
-        <% flash.each do |name, message| %>
-        <div class="<%= name %>"><%= User vre %></div>
-         <% end %>
-      </p>
-      <p class="alert"><%= alert %></p>
-    </div> 
   </body>
 </html>
