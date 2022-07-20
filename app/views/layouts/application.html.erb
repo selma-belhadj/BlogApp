@@ -11,6 +11,14 @@
   </head>
 
   <body class="container center">
-     <%= yield %>  
+     <%= yield %> 
+     <div>
+      <p class="notice">
+        <% flash.each do |name, message| %>
+        <div class="<%= name %>"><%= User vre %></div>
+         <% end %>
+      </p>
+      <p class="alert"><%= alert %></p>
+    </div> 
   </body>
 </html>
