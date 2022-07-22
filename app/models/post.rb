@@ -10,8 +10,6 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
   after_destroy :update_posts_counter
 
-
-
   def update_posts_counter
     user.update(posts_counter: user.post.count)
   end

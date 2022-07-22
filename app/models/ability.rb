@@ -39,9 +39,11 @@ class Ability
     can :read, [Post, Comment]
 
     return unless user.present?
-    can [:create,:destroy], [Post, Comment, Like], user: user
-    
+
+    can %i[create destroy], [Post, Comment, Like], user: user
+
     return unless user.role == 'admin'
+
     can :destroy, :all
     # can :manage, :all
   end
