@@ -8,6 +8,7 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   after_save :update_posts_counter
+  after_destroy :update_posts_counter
 
   def update_posts_counter
     user.update(posts_counter: user.post.count)

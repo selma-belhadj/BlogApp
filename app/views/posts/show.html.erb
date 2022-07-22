@@ -4,6 +4,9 @@
             <h2><%= @post.title %> by <%= @post.user.name %> </h2>
             <p>Comments: <%= @post.comments_counter %></p>
             <p>Likes: <%= @post.likes_counter %></p>
+            <% if can? :destroy, @post  %>
+                <%= button_to 'Delete', user_post_path(@post.user.id, @post.id), method: :delete, class: 'btn btn-danger' %> 
+            <% end %>
         </div> 
         <div class="user-section-card">
             <h4><%= @post.text %></h4>

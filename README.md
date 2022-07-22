@@ -30,6 +30,13 @@ The Blog app is a classic example of a blog website. It is a fully functional we
 - Twitter: [@Bel_Selma16](https://twitter.com/Bel_Selma16)
 - LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/)
 
+
+👤 **Ezekiel Utshudi**
+
+- GitHub: [@EzekielUtshudi](https://github.com/EzekielUtshudi)
+- Twitter: [@UtshudiEzekiel](https://twitter.com/UtshudiEzekiel)
+- LinkedIn: [@ezekiel-utshudi](https://www.linkedin.com/in/ezekiel-utshudi-195782162/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

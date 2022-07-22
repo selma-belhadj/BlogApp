@@ -5,7 +5,11 @@
         <% else %>
              <% post.five_recent_comments.each do |comment|  %>
                 <ul class="user-details">
-                    <li ><%= comment.user.name %>: <%= comment.text %></li>
+                    <li ><%= comment.user.name %>: <%= comment.text %>
+                     <% if can? :destroy, comment  %>
+                        <%= button_to 'Delete', user_post_comment_path(post_id: comment.post.id, id: comment.id), method: :delete, class: 'btn btn-danger' %> 
+                     <% end %>
+                    </li>
                 </ul>
             <% end %>
         <% end %>
