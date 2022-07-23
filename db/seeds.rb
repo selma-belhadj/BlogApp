@@ -12,7 +12,13 @@
 # User.create(name: 'Mike', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Engineer from Algeria', posts_counter: 0)
 # User.create(name: 'Selma', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', email: 'selma@gmail.com', password: 'selma123')
 # rails generate migration add_role_to_users role:string,
-Post.create(title: 'Hello Ezekiel', text: 'This is my first post for Ezekiel.', user_id: 6)
-Post.create(title: 'Hey Ezekiel', text: 'This is my second post for Ezekiel.', user_id: 6)
+# Post.create(title: 'Hello Ezekiel', text: 'This is my first post for Ezekiel.', user_id: 6)
+# Post.create(title: 'Hey Ezekiel', text: 'This is my second post for Ezekiel.', user_id: 6)
 
-Post.create(title: 'Hello Sarah', text: 'This is my first post for Sarah.', user_id: 4)
+# Post.create(title: 'Hello Sarah', text: 'This is my first post for Sarah.', user_id: 4)
+Comment.create(text: 'This is my first comment for Sarah.', user_id: 1, post_id: 1)
+# token for mimi: "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNjYzNzU2NDk2fQ.r00hXibfrqi_b_IFm2gNiZRcoNE3xcvKZARQZqdsQlg"
+# cedric : "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNjYzNzU4Mjg2fQ.ZxCNYuBEGpTUWOUWaJwY4axmElFIYLmHhrPVk2Ob0o8"
+
+Post.create(title: 'Hey Mimi', text: 'This is my first post for mimi.', user_id: 1)
+Post.create(title: 'Hey Cedric', text: 'This is my first post for cedric.', user_id: 2)
