@@ -13,6 +13,7 @@ class User < ApplicationRecord
   def three_recent_posts
     post.includes(:user).order(created_at: :desc).limit(3)
   end
+
   def generate_jwt
     JWT.encode({ id:, exp: 60.days.from_now.to_i }, Rails.application.secrets.secret_key_base)
   end
