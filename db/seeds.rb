@@ -12,7 +12,12 @@
 # User.create(name: 'Mike', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Engineer from Algeria', posts_counter: 0)
 # User.create(name: 'Selma', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', email: 'selma@gmail.com', password: 'selma123')
 # rails generate migration add_role_to_users role:string,
-Post.create(title: 'Hello Ezekiel', text: 'This is my first post for Ezekiel.', user_id: 6)
-Post.create(title: 'Hey Ezekiel', text: 'This is my second post for Ezekiel.', user_id: 6)
+# Post.create(title: 'Hello Ezekiel', text: 'This is my first post for Ezekiel.', user_id: 6)
+# Post.create(title: 'Hey Ezekiel', text: 'This is my second post for Ezekiel.', user_id: 6)
 
-Post.create(title: 'Hello Sarah', text: 'This is my first post for Sarah.', user_id: 4)
+# Post.create(title: 'Hello Sarah', text: 'This is my first post for Sarah.', user_id: 4)
+User.create(name: 'Nemwel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', email: 'nemwel@gmail.com', password: 'nemwel123', role: 'admin')
+# Post.create(title: 'Hello Ezekiel', text: 'This is my first post for Ezekiel.', user_id: 3)
+# Post.create(title: 'Hey Moise', text: 'This is my second post for Ezekiel.', user_id: 3)
+# Comment.create(text: 'This is my first comment for Ezekiel.', user_id: 3, post_id: 1)
+# Comment.create(text: 'This is my second comment for Ezekiel.', user_id: 3, post_id: 1)
